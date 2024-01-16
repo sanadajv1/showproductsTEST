@@ -48,7 +48,7 @@
                     <img src="assets/image/Baby2.png" alt="Tote Bag">
                 </div>
                 <div>
-                    <img src="assets/image/Baby3.png" alt="">
+                    <img src="assets/image/Baby3.png" alt="bAG">
                 </div>
                 <div>
                     <img src="assets/image/Baby4.png" alt="">
