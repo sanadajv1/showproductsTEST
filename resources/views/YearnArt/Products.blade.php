@@ -34,7 +34,7 @@
                      <div class="option_container">
                         <div class="options">
                            <a href="" class="option1">
-                           Men's Shirt
+                           Product Details
                            </a>
                            <a href="" class="option2">
                            Buy Now
