@@ -20,65 +20,46 @@
 @include('home.header')
 
   
-  <div class="container">
-    <div class="handmade">
-        <h2>Handmade Bags</h2>
-        <div class="handmade-products">
-            <section class="layout1">
-            @foreach($products as $products) 
-                <div class="img=box">
-                    <img src="product/{{$products->image}}" alt="">
-                    <div class="detail-box">
-                    <h5>
+<section class="product_section layout_padding">
+         <div class="container">
+            <div class="heading_container heading_center">
+               <h2>
+                  Our <span>products</span>
+               </h2>
+            </div>
+            <div class="row">
+               <div class="col-sm-6 col-md-4 col-lg-3">
+               @foreach($products as $products) 
+                  <div class="box">
+                     <div class="option_container">
+                        <div class="options">
+                           <a href="" class="option1">
+                           Men's Shirt
+                           </a>
+                           <a href="" class="option2">
+                           Buy Now
+                           </a>
+                        </div>
+                     </div>
+                    
+                     <div class="img-box">
+                        <img src="product/{{$products->image}}" alt="">
+                     </div>
+                     <div class="detail-box">
+                        <h5>
                         {{$products->product_name}}
-                    </h5>
-                    <h6>
+                        </h5>
+                        <h6>
                         {{$products->price}}
-                    </h6>
-                </div>
-                </div>
-                
-                
-            @endforeach
-            </section>
-        </div>
-    </div>
-
-    <div class="babyclothes">
-        <h2>Baby Clothing</h2>
-        <div class="babyclothing-products">
-            <section class="layout1">
-                <div>
-                    <img src="assets/image/Baby1.png" alt="Elmo Bag">
-                </div>
-                <div>
-                    <img src="assets/image/Baby2.png" alt="Tote Bag">
-                </div>
-                <div>
-                    <img src="assets/image/Baby3.png" alt="bAG">
-                </div>
-                <div>
-                    <img src="assets/image/Baby4.png" alt="">
-                </div>
-            </section>
-        </div>
-    </div>
-
-    <div class="beachwear">
-        <h2>Beachwear</h2>
-        <div class="beachwear-products">
-            <section class="layout1">
-                <div>
-                    <img src="assets/image/bw1.png" alt="Elmo Bag">
-                </div>
-                <div>
-                    <img src="assets/image/bw2.png" alt="Tote Bag">
-                </div>
-            </section>
-        </div>
-    </div>
-  </div>
-
+                        </h6>
+                     </div>
+                    
+                  </div>
+                  @endforeach   
+               </div>
+               
+         </div>
+      </section>
 <div class="chatbot">
     <div class="chatbox">
         <div class="chatbox__support">

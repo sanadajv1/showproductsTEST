@@ -26,7 +26,24 @@ class HomeController extends Controller
 
     public function index()
     {   
+        return view ('YearnArt.Home');
+    }
+
+    public function Products()
+    {
+    //pag hindi naka login yung user
         $products=Product::all();
         return view('YearnArt.Products',compact('products'));
+
+
+    //PAg naka login yung users
+        $usertype=Auth::user()->usertype;
+        $products=Product::all();
+        return view('YearnArt.Products',compact('products'));
+
+       
     }
+
+
+    
 }

@@ -19,6 +19,8 @@ use App\Http\Controllers\AdminController;
 
 route::get('/',[HomeController::class,'index']);
 
+route::get('/Products',[HomeController::class,'Products']);
+
 
 Route::middleware([
     'auth:sanctum',
@@ -41,9 +43,9 @@ Route::get('/FAQ', function () {
     return view('YearnArt.FAQ');
 })->name('FAQ');
 
-Route::get('/Products', function () {
-    return view('YearnArt.Products');
-})->name('Products');
+// Route::get('/Products', function () {
+//     return view('YearnArt.Products');
+// })->name('Products');
 
 Route::get('/About', function () {
     return view('YearnArt.About');
