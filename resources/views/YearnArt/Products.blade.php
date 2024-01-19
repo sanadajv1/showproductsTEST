@@ -33,7 +33,7 @@
                   <div class="box">
                      <div class="option_container">
                         <div class="options">
-                           <a href="" class="option1">
+                           <a href="{{url('product_details',$products->id)}}" class="option1">
                            Product Details
                            </a>
                            <a href="" class="option2">
@@ -60,85 +60,7 @@
                
          </div>
       </section>
-<div class="chatbot">
-    <div class="chatbox">
-        <div class="chatbox__support">
-            <div class="chatbox__header">
-                <div class="chatbox__content--header">
-                    <h4 class="chatbox__heading--header">YearnBot</h4>
-                </div>
-            </div>
-            <div class="chatbox__messages">
-                <div>
-                    <div class="messages__item messages__item--visitor">
-                        Can you let me talk to the support?
-                    </div>
-                    <div class="messages__item messages__item--operator">
-                        Sure!
-                    </div>
-                    <div class="messages__item messages__item--visitor">
-                        Need your help, I need a developer in my site.
-                    </div>
-                    <div class="messages__item messages__item--operator">
-                        Hi... What is it? I'm a front-end developer, yay!
-                    </div>
-                    <div class="messages__item messages__item--typing">
-                        <span class="messages__dot"></span>
-                        <span class="messages__dot"></span>
-                        <span class="messages__dot"></span>
-                    </div>
-                </div>
-            </div>
-            <div class="chatbox__footer">
-                <div class="file">
-                    <img src="assets/image/file.png" alt="file">
-                </div>
-                <input type="text" placeholder="Write a message...">
-                <div class="icon">
-                    <img src="assets/image/send.png" alt="Send">
-                </div>
-            </div>
-        </div>
-        <div class="chatbox__button">
-            <button>button</button>
-        </div>
-    </div>
-</div>
-<script src="assets/javascript/Chat.js"></script>
-<script src="assets/javascript/app.js"></script>
-
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="assets/javascript/script.js"></script>
-
-
-  <script>
-    const menuLinks = document.querySelectorAll('.menu-link');
-    
-    menuLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        menuLinks.forEach(otherLink => otherLink.classList.remove('active-link'));
-        link.classList.add('active-link');
-      });
-    });
-  </script>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-    const showMoreButton = document.getElementById("show-more");
-    const hiddenContent = document.querySelector(".hidden-content");
-
-    showMoreButton.addEventListener("click", function() {
-        if (hiddenContent.style.display === "none" || hiddenContent.style.display === "") {
-            hiddenContent.style.display = "block";
-            showMoreButton.textContent = "Less";
-        } else {
-            hiddenContent.style.display = "none";
-            showMoreButton.textContent = "More";
-        }
-    });
-});
-  </script>
+@include ('YearnArt.chatbot')
+@include ('YearnArt.script')
 </body>
 </html>

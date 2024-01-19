@@ -43,6 +43,20 @@ class HomeController extends Controller
 
        
     }
+    public function product_details($id)
+    {
+    //pag hindi naka login yung user
+    $products=product::find($id);
+    return view('YearnArt.Product_Details', compact('products'));
+
+
+    //PAg naka login yung users
+        // $usertype=Auth::user()->usertype;
+        // $products=Product::all();
+        // return view('YearnArt.Products',compact('products'));
+
+       
+    }
 
 
     
