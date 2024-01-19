@@ -19,24 +19,25 @@
 <body>
 @include('home.header')
 
+  
   <div class="container">
     <div class="handmade">
         <h2>Handmade Bags</h2>
         <div class="handmade-products">
             <section class="layout1">
+            @foreach($products as $products) 
                 <div>
                     <img src="assets/image//Elmobag.png" alt="Elmo Bag">
                 </div>
                 <div>
-                    <img src="assets/image/Totebag.png" alt="Tote Bag">
-                </div>
-                <div>
-                    <img src="assets/image/Bag.png" alt="">
-                </div>
+                <h5>
+                    adada
+                </h5>
+            @endforeach
             </section>
         </div>
     </div>
-    
+
     <div class="babyclothes">
         <h2>Baby Clothing</h2>
         <div class="babyclothing-products">
