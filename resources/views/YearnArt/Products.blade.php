@@ -26,13 +26,16 @@
         <div class="handmade-products">
             <section class="layout1">
             @foreach($products as $products) 
-                <div>
-                    <img src="assets/image//Elmobag.png" alt="Elmo Bag">
+                <div class="img=box">
+                    <img src="product/{{$products->image}}" alt="">
+                    <div class="detail-box">
+                    <h5>
+                        {{$products->product_name}}
+                    </h5>
                 </div>
-                <div>
-                <h5>
-                    adada
-                </h5>
+                </div>
+                
+                
             @endforeach
             </section>
         </div>
