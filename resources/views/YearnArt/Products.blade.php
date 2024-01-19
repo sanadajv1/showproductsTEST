@@ -28,8 +28,9 @@
                </h2>
             </div>
             <div class="row">
+            @foreach($products as $products) 
                <div class="col-sm-6 col-md-4 col-lg-3">
-               @foreach($products as $products) 
+               
                   <div class="box">
                      <div class="option_container">
                         <div class="options">
@@ -47,7 +48,7 @@
                      </div>
                      <div class="detail-box">
                         <h5>
-                        {{$products->product_name}}
+                        ₱{{$products->product_name}}
                         </h5>
                         <h6>
                         {{$products->price}}
@@ -55,8 +56,9 @@
                      </div>
                     
                   </div>
-                  @endforeach   
+                
                </div>
+               @endforeach  
                
          </div>
       </section>
