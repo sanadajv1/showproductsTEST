@@ -32,6 +32,9 @@
                     <h5>
                         {{$products->product_name}}
                     </h5>
+                    <h6>
+                        {{$products->price}}
+                    </h6>
                 </div>
                 </div>
                 
