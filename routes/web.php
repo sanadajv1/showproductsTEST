@@ -24,6 +24,10 @@ route::get('/',[HomeController::class,'index']);
 route::get('/Products',[HomeController::class,'Products']);
 route::get('/product_details/{id}',[HomeController::class,'product_details']);
 route::post('/add_cart/{id}',[HomeController::class,'add_cart']);
+route::get('/product_details/{id}',[HomeController::class,'product_details']);
+route::get('/About',[HomeController::class,'About']);
+route::get('/show_cart',[HomeController::class,'show_cart']);
+route::get('/remove_cart/{id}',[HomeController::class,'remove_cart']);
 
 
 
@@ -52,13 +56,13 @@ Route::get('/FAQ', function () {
 //     return view('YearnArt.Products');
 // })->name('Products');
 
-Route::get('/About', function () {
-    return view('YearnArt.About');
-})->name('About');
+// Route::get('/About', function () {
+//     return view('YearnArt.About');
+// })->name('About');
 
-Route::get('/MyOrders', function () {
-    return view('YearnArt.MyOrders');
-})->name('MyOrders');
+// Route::get('/MyOrders', function () {
+//     return view('YearnArt.MyOrders');
+// })->name('MyOrders');
 
 
 

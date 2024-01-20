@@ -1,16 +1,37 @@
+{{-- ito yung sa cart --}}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="assets/css/home.css">
-<link rel="stylesheet" href="assets/css/typing.css">
-<link rel="stylesheet" href="assets/css/chatbot.css">
+    @include('YearnArt.css')
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        .center{
+            margin: auto;
+            width: 60%;
+            text-align: center;
+            padding: 30px;
+        }
+        table, td, th{
+            border: 1px solid #D0A59F;
+        }
+        .th-deg{
+            font-size: 15px;
+            padding: 5px;
+            background: #D0A59F;
+        }
+        .img-deg{
+            width: 200px;
+            height: 150px;
+        }
+        body{
+            background-color: #E4D8CC;
+        }
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    </style>
 
 <title>Yearn Art | My Orders</title>
 <link rel="icon" href="assets/image/Yearn.jpg" type="image/png">
@@ -19,46 +40,48 @@
 <body>
 @include('home.header')
 
-  <div class="container">
-    <div class="pic">
-      <div class="picture">
-        <img src="assets/image/Yearn.jpg" alt="Yearn Art">
-      </div>
-    </div>
-    <div class="main-container">
-      <section id="tranding">
-          <div class="container1">
-          <div class="swiper tranding-slider">
-              <div class="swiper-wrapper">
-              <!-- Slide-start -->
-              <div class="swiper-slide tranding-slide">
-                  <div class="tranding-slide-img">
-                  <img src="assets/image/baby.jpg" alt="Tranding">
-                  </div>
-              </div>
-              <!-- Slide-end -->
-              <!-- Slide-start -->
-              <div class="swiper-slide tranding-slide">
-                  <div class="tranding-slide-img">
-                  <img src="assets/image/totebag2.jpg" alt="Tranding">
-                  </div>
-              </div>
-              <!-- Slide-end -->
-              <!-- Slide-start -->
-              <div class="swiper-slide tranding-slide">
-                  <div class="tranding-slide-img">
-                  <img src="assets/image/beachwear.jpg" alt="Tranding">
-                  </div>
-              </div>
-              <!-- Slide-end -->
-              </div>
-          </div>
-        
-          </div>
-      </section>
-    </div>
-  </div>  
 
+ <div class="center">
+    @if(session()->has('message'))
+
+    <div class='alert alert-success'>
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+        {{session()->get('message')}}
+    </div>
+    @endif
+
+    <table>
+        <tr>
+            <th class="th-deg">Image</th>
+            <th class="th-deg">Product Name</th>
+            <th class="th-deg">Price</th>
+            <th class="th-deg">Processing Time</th>
+            <th class="th-deg">Primary Color</th>
+            <th class="th-deg">Secondary</th>
+            <th class="th-deg">Size</th>
+            <th class="th-deg">Quantity</th>
+            <th class="th-deg">Action</th>
+        </tr>
+        @foreach ($cart as $cart)
+
+        <tr>
+            <td><img class="img-deg" src="/product/{{$cart->image}}" alt=""></td>
+            <td>{{$cart->product_name}}</td>
+            <td>{{$cart->price}}</td>
+            <td>{{$cart->processing_time}}</td>
+            <td style="background-color: {{$cart->primaryclr}}"></td>
+            <td style="background-color: {{$cart->secondaryclr}}"></td>
+            <td>{{$cart->size}}</td>
+            <td>{{$cart->quantity}}</td>
+            <td><a class="btn btn-danger" href="{{url('/remove_cart', $cart->id)}}" onclick="return confirm('Are you sure to delete it in you CART?')">Remove Product</a></td>
+        </tr>
+        @endforeach
+    </table>
+
+ </div>
+
+
+{{-- SCRIPTTT --}}
 <script src="assets/javascript/home.js"></script>
 
 <div class="chatbot">
@@ -116,7 +139,7 @@
 
   <script>
     const menuLinks = document.querySelectorAll('.menu-link');
-    
+
     menuLinks.forEach(link => {
       link.addEventListener('click', () => {
         menuLinks.forEach(otherLink => otherLink.classList.remove('active-link'));

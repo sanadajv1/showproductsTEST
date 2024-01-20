@@ -14,25 +14,7 @@
 
 </head>
 <body>
-  <nav class="navbar">
-    <div class="logo">
-      <img src="assets/Image/Yearn.jpg" alt="Logo">
-      <a href="/">Yearn Art</a>
-    </div>
-    <div class="menu">
-        <div class="menu-links">
-            <a href="Products" class="Products">Products</a>
-            <a href="MyOrders" class="Orders">My Orders</a>
-            <a href="About" class="About">About Us</a>
-            <a href="FAQ" class="FAQ">FAQ</a>
-            <a href="login" class="Login">Login</a>
-            <a href="register" class="Signup">Signup</a>
-        </div>
-    </div>
-    <div class="menu-btn">
-      <i class="fa-solid fa-bars"></i>
-    </div>
-  </nav> 
+    @include('home.header')
 <x-guest-layout>
     <x-authentication-card>
         <x-slot name="logo">
@@ -84,7 +66,7 @@
 
 <script>
     const menuLinks = document.querySelectorAll('.menu-link');
-    
+
     menuLinks.forEach(link => {
       link.addEventListener('click', () => {
         menuLinks.forEach(otherLink => otherLink.classList.remove('active-link'));
