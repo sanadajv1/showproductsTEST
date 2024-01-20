@@ -1,5 +1,5 @@
 .product-details{
-    margin: 70px 0px 0px 0px;
+    margin: 70px 0px 50px 0px;
     display: flex;
     color: #7D5452;
     flex-direction: row;
@@ -29,8 +29,7 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    margin-bottom: 50px;
-    margin-top: 40px;
+    margin: 40px 0px 50px 0px;
 }
 
 .names{
@@ -81,7 +80,16 @@
     margin-bottom: 20px;
 }
 
-
+.color-none{
+    width: 30px; 
+    height: 30px; 
+    margin-right: 10px; 
+    cursor: pointer; 
+    display: inline-block;
+    border-radius: 7px;
+    border: 2px solid #7D5452;
+    background: linear-gradient(to bottom right, transparent 48%, #7D5452 48%, #7D5452 52%, transparent 52%);
+}
 
 .button-choice{
     border-radius: 50px; 
@@ -112,7 +120,6 @@ button[type="submit"],
 input[type="submit"]{
     cursor: pointer; 
     margin-top: 30px; 
-
     background-color: rgba(125, 84, 82, 0.70); 
     width: 150px; 
     height: 50px; 
