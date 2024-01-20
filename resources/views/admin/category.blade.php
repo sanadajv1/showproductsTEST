@@ -54,7 +54,7 @@
 
                         @csrf
 
-                        <input class="input_color" type="text" name="category" placeholder="Write Category Name">
+                        <input class="input_color" type="text" name="category" placeholder="Write Category Name" required="">
 
                         <input type="submit" class="btn btn-primary" name="submit" value="Add Category">
                     </form>
