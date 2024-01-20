@@ -19,11 +19,13 @@ return new class extends Migration
             $table->string('address')->nullable();
             $table->string('product_name')->nullable();
             $table->string('price')->nullable();
+            $table->string('image')->nullable();
             $table->string('processing_time')->nullable();
             $table->string('primaryclr')->nullable();
             $table->string('secondaryclr')->nullable();
             $table->string('size')->nullable();
             $table->string('user_id')->nullable();
+            $table->string('product_id')->nullable();
             $table->timestamps();
         });
     }
