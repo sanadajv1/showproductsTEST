@@ -1,10 +1,18 @@
 .product-details{
-    margin: auto; 
-    width:50%; 
-    padding: 30px; 
-    display: flex; 
-    align-items: center;
+    margin: 70px 0px 0px 0px;
+    display: flex;
     color: #7D5452;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.product-img{
+    height:600px;
+    width: 600px;
+}
+
+.detail-box1{
+    margin-left: 60px;
 }
 
 .product-name{

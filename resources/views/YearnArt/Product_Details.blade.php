@@ -56,11 +56,11 @@
 
 
 
-        <div class="box product-details">
-            <div class="img-box">
+        <div class="product-details">
+            <div class="product-img">
                 <img src="product/{{$products->image}}" alt="">
             </div>
-            <div class="detail-box" style="margin-left: 20px;">
+            <div class="detail-box detail-box1">
                 <h1 class="product-name">
                     {{$products->product_name}}
                 </h1>
