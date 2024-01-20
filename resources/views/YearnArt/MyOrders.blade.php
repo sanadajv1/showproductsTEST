@@ -11,7 +11,7 @@
     <style type="text/css">
         .center{
             margin: auto;
-            width: 60%;
+            width: 70%;
             text-align: center;
             padding: 30px;
         }
@@ -29,6 +29,10 @@
         }
         body{
             background-color: #E4D8CC;
+        }
+        .total-deg{
+            font-size: 20px;
+            padding-top: 20px;
         }
 
     </style>
@@ -62,6 +66,9 @@
             <th class="th-deg">Quantity</th>
             <th class="th-deg">Action</th>
         </tr>
+
+        <?php $totalprice=0;?>
+        <?php $totalitem=0;?>
         @foreach ($cart as $cart)
 
         <tr>
@@ -75,8 +82,17 @@
             <td>{{$cart->quantity}}</td>
             <td><a class="btn btn-danger" href="{{url('/remove_cart', $cart->id)}}" onclick="return confirm('Are you sure to delete it in you CART?')">Remove Product</a></td>
         </tr>
+        <?php $totalprice=$totalprice + $cart->price; ?>
+        <?php  $totalitem=$totalitem + $cart->quantity?>
         @endforeach
+
+
     </table>
+    <div>
+        <h5 class="total-deg">Total ({{$totalitem}} item) ₱{{$totalprice}}</h5>
+        <div><a href="" class="btn btn-danger">Check Out</a></div>
+    </div>
+
 
  </div>
 
