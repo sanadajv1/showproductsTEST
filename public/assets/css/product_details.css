@@ -1,0 +1,81 @@
+.product-details{
+    margin: auto; 
+    width:50%; 
+    padding: 30px; 
+    display: flex; 
+    align-items: center;
+    color: #7D5452;
+}
+
+.product-name{
+    margin-bottom: 10%; 
+    font-weight: bold;  
+    font-size: 2em;
+}
+
+.names{
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+.color-choices{
+    margin: 10px 0px 0px 30px;
+}
+
+.color-primary{ 
+    width: 30px; 
+    height: 30px; 
+    margin-right: 10px; 
+    cursor: pointer; 
+    display: inline-block;
+}
+
+.color-secondary{ 
+    width: 30px; 
+    height: 30px; 
+    margin-right: 10px; 
+    cursor: pointer; 
+    display: inline-block;
+}
+
+.size{
+    margin: 10px 0px 10px 30px;
+}
+
+.button-choice{
+    border-radius: 50px; 
+    background: #E4D8CC; 
+    width: 90px; 
+    height: 35px; 
+    margin-right: 10px; 
+    cursor: pointer; 
+    box-shadow: -4px 4px 4px 0px rgba(255, 255, 255, 0.25) inset;
+    filter: drop-shadow(-1px 5px 4px rgba(0, 0, 0, 0.15));
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center;
+    outline: none;
+}
+
+.quantity12{
+    border:1.5px solid #7D5452;
+    border-radius: 5px; 
+    width: 100px; 
+    height: 30px; 
+    background: transparent;
+}
+
+button[type="submit"],
+input[type="submit"]{
+    cursor: pointer; 
+    margin-top: 30px; 
+    border: 2px solid rgba(125, 84, 82, 0.70); 
+    background-color: rgba(125, 84, 82, 0.50); 
+    width: 150px; 
+    height: 50px; 
+    color: #E4D8CC; 
+    font-family: Inter;
+    font-size: 15px; 
+    font-style: normal; 
+    line-height: normal;
+}
