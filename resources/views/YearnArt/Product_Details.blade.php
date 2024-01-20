@@ -16,7 +16,6 @@
             display: none; /* Hide default radio button */
         }
 
-
         /* Add hover effect if desired */
         .color-option-label:hover {
             transform: scale(1.3);
@@ -26,9 +25,7 @@
         }
 
 
-        
-
-        .selected {
+       .selected {
             transform: scale(1.13);
         }
 
@@ -70,8 +67,8 @@
                 <p class="names">
                     Description: {{$products->product_description}}
                 </p>
-                <p class="names">
-                    Price: ₱{{$products->price}}
+                <p class="price">
+                   ₱{{$products->price}}
                 </p>
                 <p class="names">
                     Processing Time: {{$products->processing_time}}
@@ -82,8 +79,9 @@
 
                 @csrf
                 <div class="color-choices">
+                <div class="primary-div">
                 <p class="names">Primary:
-                    <div class="color-box">
+                    <div class="color-box color-primary1">
                         <input type="radio" name="colorOption" id="colorOption1" value="#67598E" class="color-option" style="display: none;" >
                         <label for="colorOption1" class="color-option-label color-primary" style="background-color: #67598E"></label>
 
@@ -103,9 +101,11 @@
                         <label for="colorOption6" class="color-option-label color-primary" style="background-color: #D46BD6;"></label>
                     </div>
                     </p>
+                </div>
 
+                <div class="secondary-div">
                 <p class="names">Secondary:
-                    <div class="color-box " >
+                    <div class="color-box color-secondary1" >
                         <input type="radio" name="secondaryColor" id="secondaryColorOption1" value="#A3D0EF" class="color-option" style="display: none;" >
                         <label for="secondaryColorOption1" class="color-option-label color-secondary" style="background-color: #A3D0EF"></label>
 
@@ -126,24 +126,28 @@
                     </div>
                     </p>
                 </div>
+                </div>
 
-                <p>Size:
+                <div class="size-div">
+                <p class="names">Size:
                     <div class="size-box size">
                         <input type="radio" name="sizeOption" id="sizeOptionSmall" value="small" class="size-option" style="display: none;" required="">
-                        <label for="sizeOptionSmall" class="size-option-label button-choice">Small</label>
+                        <label for="sizeOptionSmall" class="size-option-label button-choice names">Small</label>
 
                         <input type="radio" name="sizeOption" id="sizeOptionMedium" value="medium" class="size-option" style="display: none;" >
-                        <label for="sizeOptionMedium" class="size-option-label button-choice">Medium</label>
+                        <label for="sizeOptionMedium" class="size-option-label button-choice names">Medium</label>
 
                         <input type="radio" name="sizeOption" id="sizeOptionLarge" value="large" class="size-option" style="display: none;">
-                        <label for="sizeOptionLarge" class="size-option-label button-choice">Large</label>
+                        <label for="sizeOptionLarge" class="size-option-label button-choice names">Large</label>
 
 
                         <!-- Add more size options as needed -->
                     </div>
                 </p>
-                <p>Quantity:
-                    <input type="number" name="quantity" value="1" min="1" required="" style="border:1.5px solid #7D5452;border-radius: 5px; width: 100px; height: 30px; background: transparent; margin-left: 10px;">
+                </div>
+
+                <p class="names">Quantity:
+                    <input type="number" name="quantity" value="1" min="1" required="" style="border:1.5px solid #b0968f;border-radius: 5px; width: 100px; height: 30px; background: transparent; margin-left: 10px;">
                 </p>
 
                 <button type="submit" class="button-cart">Add to Cart</button>
