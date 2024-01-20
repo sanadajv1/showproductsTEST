@@ -29,9 +29,15 @@ class HomeController extends Controller
     {
         return view ('YearnArt.Home');
     }
+    public function About(){
+        return view ('YearnArt.About');
 
-    public function Products()
-    {
+        $user=Auth::user();
+        return view ('YearnArt.About');
+
+    }
+
+    public function Products(){
     //pag hindi naka login yung user
         $products=Product::all();
         return view('YearnArt.Products',compact('products'));
@@ -44,6 +50,7 @@ class HomeController extends Controller
 
 
     }
+
     public function product_details($id)
     {
     //pag hindi naka login yung user
@@ -85,10 +92,21 @@ class HomeController extends Controller
             $cart->save();
 
             return redirect()->back()->with('message', 'Added to Cart');
+        }
+        else{
+            return redirect('login');
+        }
+    }
 
 
+    public function show_cart(){
 
+        if(Auth::id()){
+        $id=Auth::user()->id;
 
+        $cart=cart::where('user_id', '=', $id)->get();
+
+        return view('YearnArt.MyOrders', compact('cart'));
 
 
         }
@@ -96,7 +114,17 @@ class HomeController extends Controller
             return redirect('login');
         }
 
+
     }
+    public function remove_cart($id){
+
+        $cart=cart::find($id);
+
+        $cart->delete();
+
+        return redirect()->back()->with('message', 'Successfully Deleted');
+    }
+
 
 
 
