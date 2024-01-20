@@ -11,7 +11,7 @@
     <style type="text/css">
         .center{
             margin: auto;
-            width: 60%;
+            width: 70%;
             text-align: center;
             padding: 30px;
         }
@@ -29,6 +29,10 @@
         }
         body{
             background-color: #E4D8CC;
+        }
+        .total-deg{
+            font-size: 20px;
+            padding-top: 20px;
         }
 
     </style>
@@ -62,12 +66,15 @@
             <th class="th-deg">Quantity</th>
             <th class="th-deg">Action</th>
         </tr>
+
+        <?php $totalprice=0;?>
+        <?php $totalitem=0;?>
         @foreach ($cart as $cart)
 
         <tr>
             <td><img class="img-deg" src="/product/{{$cart->image}}" alt=""></td>
             <td>{{$cart->product_name}}</td>
-            <td>₱{{$cart->price}}</td>
+            <td>₱{{$cart->price *  $cart->quantity}}</td>
             <td>{{$cart->processing_time}}</td>
             <td style="background-color: {{$cart->primaryclr}}"></td>
             <td style="background-color: {{$cart->secondaryclr}}"></td>
@@ -75,8 +82,17 @@
             <td>{{$cart->quantity}}</td>
             <td><a class="btn btn-danger" href="{{url('/remove_cart', $cart->id)}}" onclick="return confirm('Are you sure to delete it in you CART?')">Remove Product</a></td>
         </tr>
+        <?php $totalprice=$totalprice + ($cart->price * $cart->quantity); ?>
+        <?php  $totalitem=$totalitem + $cart->quantity?>
         @endforeach
+
+
     </table>
+    <div>
+        <h5 class="total-deg">Total ({{$totalitem}} item) ₱{{$totalprice}}</h5>
+        <div><a href="{{url('/cash_order')}}" class="btn btn-danger" onclick="return confirm(' Please be advised that the estimated delivery time for your order is anticipated to be between 2 to 3 weeks, although it may vary depending on the number of products you have ordered. Our team is working diligently to fulfill each order in a timely manner, ensuring that each item is carefully packaged and delivered to you in pristine condition. Are you sure you want to place order? Total: ({{$totalitem}} Item) ₱{{$totalprice}}');">Place Order</a></div>
+    </div>
+
 
  </div>
 
