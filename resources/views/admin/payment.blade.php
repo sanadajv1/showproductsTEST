@@ -24,6 +24,9 @@
         width: 100px;
         height: 100px;
     }
+    .th-deg{
+        background: #FAC6BF;
+    }
    </style>
 
   </head>
@@ -41,11 +44,12 @@
                 <h1 class="title-deg">All Orders</h1>
                 <table class="table-deg">
                     <tr>
-                        <th>Name</th>
-                        <th>Product Name</th>
-                        <th>Quantity</th>
-                        <th>Price</th>
-                        <th>Action</th>
+                        <th class="th-deg">Name</th>
+                        <th class="th-deg">Product Name</th>
+                        <th class="th-deg">Quantity</th>
+                        <th class="th-deg">Price</th>
+
+                        <th class="th-deg">Action</th>
 
 
 
@@ -58,19 +62,18 @@
 
                     <tr>
                         <td>{{$order->name}}</td>
-
-
                         <td>{{$order->product_name}}</td>
                         <td>{{$order->price}}</td>
                         <td>{{$order->quantity}}</td>
-                        <td>{{$order->processing_time}}</td>
-                        <td style="background-color: {{$order->primaryclr}}"></td>
-                        <td style="background-color: {{$order->secondaryclr}}"></td>
-                        <td>{{$order->size}}</td>
 
+                        <td>
+                            @if($order->order_status=='On Process')
+                            <p>Paid</p>
+                            @else
+                            <a href="{{url('delivered', $order->id)}}" class="btn btn-success" onclick="return confirm('Are you sure this ordered is already paid?')">Done</a>
 
-                        <td>{{$order->payment_status}}</td>
-                        <td>{{$order->order_status}}</td>
+                            @endif
+                        </td>
 
 
                     </tr>

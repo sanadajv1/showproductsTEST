@@ -24,6 +24,9 @@
         width: 100px;
         height: 100px;
     }
+    .th-deg{
+        background: #FAC6BF;
+    }
    </style>
 
   </head>
@@ -41,22 +44,23 @@
                 <h1 class="title-deg">All Orders</h1>
                 <table class="table-deg">
                     <tr>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Phone</th>
+                        <th class="th-deg">Name</th>
+                        <th class="th-deg">Email</th>
+                        <th class="th-deg">Phone</th>
 
 
-                        <th>Product Name</th>
-                        <th>Price</th>
-                        <th>Quantity</th>
-                        <th>Processing Time</th>
-                        <th>Primary Color</th>
-                        <th>Secondary Color</th>
-                        <th>Size</th>
+                        <th class="th-deg">Product Name</th>
+                        <th class="th-deg">Price</th>
+                        <th class="th-deg">Quantity</th>
+                        <th class="th-deg">Processing Time</th>
+                        <th class="th-deg">Primary Color</th>
+                        <th class="th-deg">Secondary Color</th>
+                        <th class="th-deg">Size</th>
 
 
-                        <th>Payment Status</th>
-                        <th>Order Status</th>
+                        <th class="th-deg">Payment Status</th>
+                        <th class="th-deg">Order Status</th>
+                        
 
 
                     </tr>
@@ -80,6 +84,7 @@
 
                         <td>{{$order->payment_status}}</td>
                         <td>{{$order->order_status}}</td>
+
 
 
                     </tr>

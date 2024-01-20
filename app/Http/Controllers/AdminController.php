@@ -113,9 +113,18 @@ class AdminController extends Controller
     public function payment(){
         $order=order::all();
 
+        return view ('admin.payment', compact('order'));
+    }
 
+    public function delivered($id){
 
-        return view ('admin.payment', compact('payment'));
+        $order=order::find($id);
+
+        $order->order_status="On Process";
+
+        $order->save();
+
+        return redirect()->back();
     }
 
 
