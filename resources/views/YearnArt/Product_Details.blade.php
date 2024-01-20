@@ -123,6 +123,9 @@
 
                         <input type="radio" name="secondaryColor" id="secondaryColorOption6" value="#D46BD6" class="color-option" style="display: none;">
                         <label for="secondaryColorOption6" class="color-option-label color-secondary" style="background-color: #D46BD6"></label>
+
+                        <input type="radio" name="secondaryColor" id="secondaryColorOption7" value="rgba(255, 255, 255, 0.00);" class="color-option" style="display: none;">
+                        <label for="secondaryColorOption7" class="color-option-label color-none"></label>
                     </div>
                     </p>
                 </div>
