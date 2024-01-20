@@ -67,7 +67,7 @@
         <tr>
             <td><img class="img-deg" src="/product/{{$cart->image}}" alt=""></td>
             <td>{{$cart->product_name}}</td>
-            <td>{{$cart->price}}</td>
+            <td>₱{{$cart->price}}</td>
             <td>{{$cart->processing_time}}</td>
             <td style="background-color: {{$cart->primaryclr}}"></td>
             <td style="background-color: {{$cart->secondaryclr}}"></td>
