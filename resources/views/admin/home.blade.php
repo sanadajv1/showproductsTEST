@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
    @include('admin.css')
-
+   <title>Yearn Art | Home</title>
   </head>
   <body>
 

@@ -35,7 +35,7 @@
   </nav>
 
   <p id="Welcome">Welcome to Yearn Art! Please Login.</p>
- 
+
   <div id="login-form">
     <form>
       <label for="email">Email or Phone Number</label>
@@ -46,12 +46,12 @@
     </form>
     <a href="#">Forgot Password?</a>
   </div>
-  
+
 
 
   <script>
     const menuLinks = document.querySelectorAll('.menu-link');
-    
+
     menuLinks.forEach(link => {
       link.addEventListener('click', () => {
         menuLinks.forEach(otherLink => otherLink.classList.remove('active-link'));

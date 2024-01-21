@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <base href="/public">
+    <title>Yearn Art | Edit Product</title>
    @include('admin.css')
   </head>
   <style type="text/css">
@@ -12,7 +13,7 @@
         .font_size{
             font-size: 40px;
             padding-bottom: 30px;
-        
+
         }
         .text_color{
             color: black;
@@ -25,7 +26,7 @@
         .div_design{
             padding-bottom: 15px;
         }
-       
+
     </style>
   <body>
     <div class="container-scroller">
@@ -47,7 +48,7 @@
 
                 @endif
                 <div class="div_center">
-                
+
                     <h1 class="font_size">Update Product</h1>
 
                     <form action="{{url('/update_product_confirm', $product->id)}}" method="POST" enctype="multipart/form-data">
@@ -57,7 +58,7 @@
                         </div>
 
                         @csrf
-                        
+
                         <div class="div_design">
                             <label>Product Category</label>
                            <select class="text_color"name="category" id="" required="">
@@ -65,7 +66,7 @@
                             @foreach($category as $category)
                             <option value="{{$category->category_name}}">{{$category->category_name}}</option>
                             @endforeach
-                           
+
                            </select>
                         </div>
                         <div class="div_design">
@@ -89,18 +90,18 @@
                             <img style="margin:auto;" height="100" width="100"src="/product/{{$product->image}}" alt="">
                         </div>
                         <div class="div_design">
-                           
+
                             <input type="submit" value="Update Product" class="btn btn-primary">
                         </div>
 
                     </form>
-    
-                        
+
+
                 </div>
 
-            </div>  
-        </div>              
-      
+            </div>
+        </div>
+
     <!-- container-scroller -->
     <!-- plugins:js -->
    @include('admin.script')

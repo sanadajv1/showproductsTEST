@@ -20,7 +20,7 @@
                         </div>
                       </div>
                     </div>
-                    <h6 class="text-muted font-weight-normal">Jeric</h6>
+                    <h6 class="text-muted font-weight-normal">Sales</h6>
                   </div>
                 </div>
               </div>
@@ -273,7 +273,7 @@
                 </div>
               </div>
             </div>
-            
+
           <!-- content-wrapper ends -->
           <!-- partial:partials/_footer.html -->
           <footer class="footer">

@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <title>Yearn Art | Category</title>
     @include('admin.css')
 
     <style type="text/css">

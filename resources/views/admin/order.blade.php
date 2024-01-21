@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Yearn Art | Order</title>
    @include('admin.css')
    <style>
     .title-deg {
@@ -60,7 +61,7 @@
 
                         <th class="th-deg">Payment Status</th>
                         <th class="th-deg">Order Status</th>
-                        
+
 
 
                     </tr>

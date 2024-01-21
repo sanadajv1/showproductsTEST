@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
    @include('admin.css')
+   <title>Yearn Art | Show Product</title>
   </head>
   <style type="text/css">
        .center{

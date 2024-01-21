@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
    @include('admin.css')
+   <title>Yearn Art | Products</title>
   </head>
   <style type="text/css">
         .div_center {
@@ -23,7 +24,7 @@
         .div_design{
             padding-bottom: 15px;
         }
-       
+
     </style>
   <body>
     <div class="container-scroller">
@@ -45,7 +46,7 @@
 
                 @endif
                 <div class="div_center">
-                
+
                     <h1 class="font_size">Add Product</h1>
 
                     <form action="{{url('/add_product')}}" method="POST" enctype="multipart/form-data">
@@ -55,7 +56,7 @@
                         </div>
 
                         @csrf
-                        
+
                         <div class="div_design">
                             <label>Product Category</label>
                            <select class="text_color"name="category" id="" required="">
@@ -83,18 +84,18 @@
                             <input type="file" name="image" required="">
                         </div>
                         <div class="div_design">
-                           
+
                             <input type="submit" value="Add Product" class="btn btn-primary">
                         </div>
 
                     </form>
-    
-                        
+
+
                 </div>
 
-            </div>  
-        </div>              
-      
+            </div>
+        </div>
+
     <!-- container-scroller -->
     <!-- plugins:js -->
    @include('admin.script')

@@ -16,7 +16,7 @@
               </li>
             </ul>
             <ul class="navbar-nav navbar-nav-right">
-              
+
               <li class="nav-item nav-settings d-none d-lg-block">
                 <a class="nav-link" href="#">
                   <i class="mdi mdi-view-grid"></i>
@@ -112,11 +112,11 @@
               </li>
               <li>
               <x-app-layout>
-      
+
               </x-app-layout>
               </li>
-              
+
             </ul>
-         
+
           </div>
         </nav>

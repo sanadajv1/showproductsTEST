@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+    <title>Yearn Art | Payment</title>
   <head>
    @include('admin.css')
    <style>
